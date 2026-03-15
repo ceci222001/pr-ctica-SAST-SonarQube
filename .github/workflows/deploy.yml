@@ -56,7 +56,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:main
+          tags: ghcr.io/ceci222001/pr-ctica-sast-sonarqube:main
 
   deploy:
     needs: build-and-push
