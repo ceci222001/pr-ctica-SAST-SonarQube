@@ -86,6 +86,8 @@ jobs:
             echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
             docker stop my-node-app || true
             docker rm my-node-app || true
+            docker stop mi-app-contenedor || true
+            docker rm mi-app-contenedor || true
             docker pull ghcr.io/ceci222001/pr-ctica-sast-sonarqube:main
             docker run -d \
               --name my-node-app \
